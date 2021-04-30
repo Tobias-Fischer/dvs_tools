@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>dvs_sort_events</name>
+  <name>dvs_filter_bursts</name>
   <version>0.0.0</version>
-  <description>Sort events in a rosbag by timestamp</description>
-  <maintainer email="cedric.scheerlinck@anu.edu.au">Cedric Scheerlinck</maintainer>
+  <description>Filter out bursts in a bag file</description>
+  <maintainer email="tobias.fischer@qut.edu.au">Tobias Fischer</maintainer>
   <license>GNU GPL</license>
 
   <buildtool_depend>catkin</buildtool_depend>

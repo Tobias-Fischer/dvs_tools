@@ -79,6 +79,15 @@ int main(int argc, char* argv[])
     const std::string topic_name = topic.first;
     cv::Mat& histogram = topic.second;
     std::vector<cv::Point>& hot_pixels = hot_pixels_by_topic[topic_name];
+    std::sort(hot_pixels.begin(), hot_pixels.end(), [](const cv::Point &p1, const cv::Point &p2) {
+        if(p1.x < p2.x) {
+            return true;
+        } else if(p1.x == p2.x) {
+            return p1.y < p2.y;
+        } else {
+            return false;
+        }
+    });
     dvs_hot_pixel_filter::utils::save_stats(
         bag_name, topic_name, histogram, hot_pixels, one_topic);
   }
