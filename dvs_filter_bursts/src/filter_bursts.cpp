@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
 
   std::cout << "took " << elapsed_seconds.count() << "s." << std::endl;
 
-  std::cout << "Writing... ";
+  std::cout << "Writing... " << std::flush;
 
   const double max_duration_ms = (FLAGS_max_events == INITIAL_MAX_EVENTS
                                   && FLAGS_max_duration_ms == INITIAL_MAX_DURATION_MS)
